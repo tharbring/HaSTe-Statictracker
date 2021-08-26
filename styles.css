@@ -1,5 +1,15 @@
 /* Show it is fixed to the top */
 body {
+  background-color: #383838e1;
   min-height: 75rem;
   padding-top: 4.5rem;
+}
+main{
+  color:antiquewhite;
+  margin-top: 1%;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+.member-table{
+  padding-top: 1%;
 }

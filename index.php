@@ -1,3 +1,13 @@
+<?php
+
+//Error Reporting Trigger
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+
+
+?>
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -22,6 +32,6 @@
     <?php include ($_SERVER['DOCUMENT_ROOT'] . '/includes/content.php'); ?>
   </main>
 
-  <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
