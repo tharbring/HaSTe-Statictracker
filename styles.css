@@ -5,11 +5,16 @@ body {
   padding-top: 4.5rem;
 }
 main{
-  color:antiquewhite;
+  color:rgb(255, 249, 242);
   margin-top: 1%;
   margin-left: 10%;
   margin-right: 10%;
 }
 .member-table{
   padding-top: 1%;
+}
+
+/*** Text-CSS ***/
+.floatlabel{
+  color:black;
 }
