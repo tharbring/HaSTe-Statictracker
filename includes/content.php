@@ -2,11 +2,11 @@
 
 /* Variablen */
 $members = "members";
-$addmembers = "addmembers";
+$addmember = "addmember";
 
 switch ($_GET['page']) {
-    case $addmembers:
-        include ($_SERVER['DOCUMENT_ROOT'] . '/content/addmembers.php');
+    case $addmember:
+        include ($_SERVER['DOCUMENT_ROOT'] . '/content/addmember.php');
     break;
     case $members:
        include ($_SERVER['DOCUMENT_ROOT'] . '/content/members.php'); 
