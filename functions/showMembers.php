@@ -47,7 +47,7 @@ for($i = 0; $i<2; $i++){
                 <select class="form-select" id="primaryjob" name="primary'.$counter.'">'. showSelectors($tanks[$i]['job_primary']) .'</select>
             </td>
             <td>
-                <select class="form-select" id="secondaryjob" name="secondary'.$counter.'">'. showSelectors($tanks[$i]['job_primary']) .'</select>
+                <select class="form-select" id="secondaryjob" name="secondary'.$counter.'">'. showSelectors($tanks[$i]['job_secondary']) .'</select>
             </td>
         <tr>
     ';

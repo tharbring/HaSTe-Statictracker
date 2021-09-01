@@ -40,3 +40,5 @@ $updateURL = "/functions/updateTimes.php?id=" . $id;
         </div>
     </form>
 </div>
+<br>
+<br>

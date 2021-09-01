@@ -36,6 +36,7 @@ main{
 /*** Member-CSS ***/
 
 .member-table{
+  text-align: center;
   padding-top: 1%;
 }
 

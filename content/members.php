@@ -1,3 +1,31 @@
+<?php
+
+include ($_SERVER['DOCUMENT_ROOT'] . '/functions/dbaccess.php');
+
+$sql = $conn->prepare("SELECT COUNT(*) FROM members");
+$sql -> execute();
+$row = $sql->fetchColumn();
+
+include ($_SERVER['DOCUMENT_ROOT'] . '/functions/dbclose.php');
+
+function ToggleAddmembers($count){
+    if ($count >= 8){
+        $output = '
+        <div class="col-auto">
+            <a class="btn btn-light disabled" href="./index.php?page=addmember">Add Member</a>
+        </div>';
+    } else {
+        $output = '
+        <div class="col-auto">
+            <a class="btn btn-light" href="./index.php?page=addmember">Add Member</a>
+        </div>';
+    }
+    echo $output;
+}
+
+?>
+
+
 <div class="row">
     <h1 class="font-header">Static-Members</h1>
 </div>
@@ -17,9 +45,7 @@
             </tbody>
         </table>
         <div class="row justify-content-evenly">
-            <div class="col-auto">
-                <a class="btn btn-light" href="./index.php?page=addmember">Add Member</a>
-            </div>
+            <?php ToggleAddmembers($row); ?>
             <div class="col-auto">
                 <button type="submit" class="btn btn-light">Save Changes</button>
             </div>
