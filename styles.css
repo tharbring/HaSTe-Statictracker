@@ -10,11 +10,40 @@ main{
   margin-left: 10%;
   margin-right: 10%;
 }
+
+/*** Text-CSS ***/
+
+.floatlabel{
+  color:black;
+}
+
+/*** Header CSS ***/
+
+.navlink-padding{
+  padding-top: 6px;
+  padding-bottom: 0px;
+}
+
+/*** Overview-CSS ***/
+
+.overview-table{
+  text-align: center;
+  padding-top: 1%;
+  padding-left: 20%;
+  padding-right: 20%;
+}
+
+/*** Member-CSS ***/
+
 .member-table{
   padding-top: 1%;
 }
 
-/*** Text-CSS ***/
-.floatlabel{
-  color:black;
+/*** Times-CSS ***/
+
+.times-table{
+  text-align: center;
+  padding-top: 1%;
+  padding-left: 10%;
+  padding-right: 10%;
 }

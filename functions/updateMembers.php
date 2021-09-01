@@ -52,6 +52,8 @@ for($i = 0; $i < 8; $i++){
     }
 }
 
+include ($_SERVER['DOCUMENT_ROOT'] . '/functions/dbclose.php');
+
 header('Location: /index.php?page=members');
 die();
 

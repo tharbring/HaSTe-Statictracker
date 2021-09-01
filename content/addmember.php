@@ -60,7 +60,7 @@
                         <option value="SMN">SMN</option>
                         <option value="RDM">RDM</option>
                     </select>
-                    <label for="primaryjob">Secondary Job</label>
+                    <label for="secondaryjob">Secondary Job</label>
                 </div>
             </div>
         </div>

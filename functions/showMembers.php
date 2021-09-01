@@ -17,6 +17,8 @@ $sql = $conn->prepare("SELECT * FROM members WHERE job_primary = 'MNK' OR job_pr
 $sql -> execute();
 $dps = $sql->fetchAll();
 
+include ($_SERVER['DOCUMENT_ROOT'] . '/functions/dbclose.php');
+
 function showSelectors($job){
     $jobs = array("PLD","WAR","DRK","GNB","WHM","SCH","AST","SGE","MNK","DRG","NIN","SAM","RPR","BRD","MCH","DNC","BLM","SMN","RDM");
     $output = "";
