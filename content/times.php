@@ -19,7 +19,7 @@ $updateURL = "/functions/updateTimes.php?id=" . $id;
 </div>
 <div class="row times-table">
     <form action="<?php echo $updateURL; ?>" method="post">
-        <table class="table table-hover table-dark table-striped">
+        <table class="table table-sm table-hover table-dark table-striped">
             <thead>
                 <tr>
                     <th scope="col">Day</th>
