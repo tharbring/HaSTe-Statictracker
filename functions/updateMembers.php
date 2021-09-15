@@ -1,10 +1,13 @@
 <?php
 
 $names = array();
+$ids = array();
 $job1 = array();
 $job2 = array();
 
 for($i = 1; $i < 9; $i++){
+    $id = "dbid".$i;
+    $ids[] = $_POST[$id];
     $name = "name".$i;
     $names[] = $_POST[$name];
     $primary = "primary".$i;
@@ -34,7 +37,7 @@ for($i = 0; $i < 8; $i++){
 
 for($i = 0; $i < 8; $i++){
     try{
-        $sql = $conn->prepare("UPDATE members SET name = '$names[$i]', job_primary = '$job1[$i]', job_secondary = '$job2[$i]' WHERE name = '$oldnames[$i]'");
+        $sql = $conn->prepare("UPDATE members SET name = '$names[$i]', job_primary = '$job1[$i]', job_secondary = '$job2[$i]' WHERE ID = '$ids[$i]'");
         $sql->execute();
         echo "Updated Entry " . $oldnames[$i];
         echo "<br>";
@@ -45,7 +48,7 @@ for($i = 0; $i < 8; $i++){
 
 include ($_SERVER['DOCUMENT_ROOT'] . '/functions/dbclose.php');
 
-//header('Location: /index.php?page=members');
-//die();
+header('Location: /index.php?page=members');
+die();
 
 ?>

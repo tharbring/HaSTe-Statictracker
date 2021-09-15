@@ -16,14 +16,14 @@ include ($_SERVER['DOCUMENT_ROOT'] . '/functions/dbclose.php');
 
 function showTimes($data, $offset, $day, $pid){
 
-for($i = 0; $i < 6; $i++){
+for($i = 0; $i < 12; $i++){
     $j = $i + $offset;
 
     if($i == 0){
         if($data[$j][$pid] == 2){
             $output='
             <tr>
-                <th rowspan="6">' . $day . '</th>
+                <th rowspan="12">' . $day . '</th>
                 <td>' . $data[$j]["slot"] . '</td>
                 <div class="form-check form-check-inline">
                     <td><input class="form-check-input" type="radio" name="' . $data[$j]["ID"] . '" value="2" checked></td>
@@ -35,7 +35,7 @@ for($i = 0; $i < 6; $i++){
         }else if($data[$j][$pid] == 1){
             $output='
             <tr>
-                <th rowspan="6">' . $day . '</th>
+                <th rowspan="12">' . $day . '</th>
                 <td>' . $data[$j]["slot"] . '</td>
                 <div class="form-check form-check-inline">
                     <td><input class="form-check-input" type="radio" name="' . $data[$j]["ID"] . '" value="2"></td>
@@ -47,7 +47,7 @@ for($i = 0; $i < 6; $i++){
         }else if($data[$j][$pid] == 0){
             $output='
             <tr>
-                <th rowspan="6">' . $day . '</th>
+                <th rowspan="12">' . $day . '</th>
                 <td>' . $data[$j]["slot"] . '</td>
                 <div class="form-check form-check-inline">
                     <td><input class="form-check-input" type="radio" name="' . $data[$j]["ID"] . '" value="2"></td>
@@ -98,11 +98,11 @@ for($i = 0; $i < 6; $i++){
 
 
 showTimes($res, 0, "Monday", $playerID);
-showTimes($res, 6, "Tuesday", $playerID);
-showTimes($res, 12, "Wednesday", $playerID);
-showTimes($res, 18, "Thursday", $playerID);
-showTimes($res, 24, "Friday", $playerID);
-showTimes($res, 30, "Saturday", $playerID);
-showTimes($res, 36, "Sunday", $playerID);
+showTimes($res, 12, "Tuesday", $playerID);
+showTimes($res, 24, "Wednesday", $playerID);
+showTimes($res, 36, "Thursday", $playerID);
+showTimes($res, 48, "Friday", $playerID);
+showTimes($res, 60, "Saturday", $playerID);
+showTimes($res, 72, "Sunday", $playerID);
 
 ?>

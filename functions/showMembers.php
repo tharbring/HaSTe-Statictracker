@@ -33,62 +33,77 @@ function showSelectors($job){
 }
 $counter = 0;
 //Show Tankrows
-for($i = 0; $i<2; $i++){
-    $counter++;
-    echo '
-        <tr>
-            <th scope="row">
-                <img src="/storage/img/role_tank.png" alt="Roleicon Tank" height="40">
-            </th>
-            <td>
-                <input type="text" class="form-control" id="name" value="'. $tanks[$i]['name'] . '" name="name'.$counter.'">
-            </td>
-            <td>
-                <select class="form-select" id="primaryjob" name="primary'.$counter.'">'. showSelectors($tanks[$i]['job_primary']) .'</select>
-            </td>
-            <td>
-                <select class="form-select" id="secondaryjob" name="secondary'.$counter.'">'. showSelectors($tanks[$i]['job_secondary']) .'</select>
-            </td>
-        <tr>
-    ';
+for($i = 0; $i<8; $i++){
+    if(!$tanks[$i]['ID']){
+        //Display no row
+    } else {
+        $counter++;
+        echo '
+            <tr>
+                <th scope="row">
+                    <img src="/storage/img/role_tank.png" alt="Roleicon Tank" height="40">
+                </th>
+                <td>
+                    <input type="hidden" id="dbid" value="'. $tanks[$i]['ID'] . '" name="dbid'.$counter.'">
+                    <input type="text" class="form-control" id="name" value="'. $tanks[$i]['name'] . '" name="name'.$counter.'">
+                </td>
+                <td>
+                    <select class="form-select" id="primaryjob" name="primary'.$counter.'">'. showSelectors($tanks[$i]['job_primary']) .'</select>
+                </td>
+                <td>
+                    <select class="form-select" id="secondaryjob" name="secondary'.$counter.'">'. showSelectors($tanks[$i]['job_secondary']) .'</select>
+                </td>
+            <tr>
+        ';
+    }
 }
 //Show Healerrows
-for($i = 0; $i<2; $i++){
-    $counter++;
-    echo '
-        <tr>
-            <th scope="row">
-                <img src="/storage/img/role_heal.png" alt="Roleicon Heal" height="40">
-            </th>
-            <td>
-                <input type="text" class="form-control" id="name" value="'. $healers[$i]['name'] . '" name="name'.$counter.'">
-            </td>
-            <td>
-                <select class="form-select" id="primaryjob" name="primary'.$counter.'">'. showSelectors($healers[$i]['job_primary']) .'</select>
-            </td>
-            <td>
-                <select class="form-select" id="secondaryjob" name="secondary'.$counter.'">'. showSelectors($healers[$i]['job_secondary']) .'</select>
-            </td>
-        <tr>
-    ';
+for($i = 0; $i<8; $i++){
+    if(!$healers[$i]['ID']){
+        //Display no row
+    } else {
+        $counter++;
+        echo '
+            <tr>
+                <th scope="row">
+                    <img src="/storage/img/role_heal.png" alt="Roleicon Heal" height="40">
+                </th>
+                <td>
+                    <input type="hidden" id="dbid" value="'. $healers[$i]['ID'] . '" name="dbid'.$counter.'">
+                    <input type="text" class="form-control" id="name" value="'. $healers[$i]['name'] . '" name="name'.$counter.'">
+                </td>
+                <td>
+                    <select class="form-select" id="primaryjob" name="primary'.$counter.'">'. showSelectors($healers[$i]['job_primary']) .'</select>
+                </td>
+                <td>
+                    <select class="form-select" id="secondaryjob" name="secondary'.$counter.'">'. showSelectors($healers[$i]['job_secondary']) .'</select>
+                </td>
+            <tr>
+        ';
+    }
 }
 //Show DPSrows
-for($i = 0; $i<4; $i++){
-    $counter++;
-    echo '
-        <tr>
-            <th scope="row">
-                <img src="/storage/img/role_dps.png" alt="Roleicon DPS" height="40">
-            </th>
-            <td>
-                <input type="text" class="form-control" id="name" value="'. $dps[$i]['name'] . '" name="name'.$counter.'">
-            </td>
-            <td>
-                <select class="form-select" id="primaryjob" name="primary'.$counter.'">'. showSelectors($dps[$i]['job_primary']) .'</select>
-            </td>
-            <td>
-                <select class="form-select" id="secondaryjob" name="secondary'.$counter.'">'. showSelectors($dps[$i]['job_secondary']) .'</select>
-            </td>
-        <tr>
-    ';
+for($i = 0; $i<8; $i++){
+    if(!$dps[$i]['ID']){
+        //Display no row
+    } else {
+        $counter++;
+        echo '
+            <tr>
+                <th scope="row">
+                    <img src="/storage/img/role_dps.png" alt="Roleicon DPS" height="40">
+                </th>
+                <td>
+                    <input type="hidden" id="dbid" value="'. $dps[$i]['ID'] . '" name="dbid'.$counter.'">
+                    <input type="text" class="form-control" id="name" value="'. $dps[$i]['name'] . '" name="name'.$counter.'">
+                </td>
+                <td>
+                    <select class="form-select" id="primaryjob" name="primary'.$counter.'">'. showSelectors($dps[$i]['job_primary']) .'</select>
+                </td>
+                <td>
+                    <select class="form-select" id="secondaryjob" name="secondary'.$counter.'">'. showSelectors($dps[$i]['job_secondary']) .'</select>
+                </td>
+            <tr>
+        ';
+    }
 }
