@@ -15,31 +15,22 @@ for($i = 1; $i < 9; $i++){
 
 include ($_SERVER['DOCUMENT_ROOT'] . '/functions/dbaccess.php');
 
-//Fetch Tanks
-$sql = $conn->prepare("SELECT name FROM members WHERE job_primary = 'PLD' OR job_primary = 'WAR' OR job_primary = 'DRK' or job_primary = 'GNB'");
+//Fetch Players
+$sql = $conn->prepare("SELECT * FROM members");
 $sql -> execute();
-$tanks = $sql->fetchAll();
+$players = $sql->fetchAll();
 
-//Fetch Healers
-$sql = $conn->prepare("SELECT name FROM members WHERE job_primary = 'WHM' OR job_primary = 'SCH' OR job_primary = 'AST' or job_primary = 'SGE'");
-$sql -> execute();
-$healers = $sql->fetchAll();
-
-//Fetch DPS
-$sql = $conn->prepare("SELECT name FROM members WHERE job_primary = 'MNK' OR job_primary = 'DRG' OR job_primary = 'NIN' or job_primary = 'SAM' OR job_primary = 'RPR' OR job_primary = 'BRD' OR job_primary = 'MCH' OR job_primary = 'DNC' OR job_primary = 'BLM' OR job_primary = 'SMN' OR job_primary = 'RDM'");
-$sql -> execute();
-$dps = $sql->fetchAll();
 
 $oldnames = array();
 
-$oldnames[] = $tanks[0]['name'];
-$oldnames[] = $tanks[1]['name'];
-$oldnames[] = $healers[0]['name'];
-$oldnames[] = $healers[1]['name'];
-$oldnames[] = $dps[0]['name'];
-$oldnames[] = $dps[1]['name'];
-$oldnames[] = $dps[2]['name'];
-$oldnames[] = $dps[3]['name'];
+for($i = 0; $i < 8; $i++){
+    $oldnames[] = $players[$i]['name'];
+}
+
+for($i = 0; $i < 8; $i++){
+    echo "Changed name " . $oldnames[$i] . " to " . $names[$i];
+    echo "<br>";
+}
 
 for($i = 0; $i < 8; $i++){
     try{
@@ -54,7 +45,7 @@ for($i = 0; $i < 8; $i++){
 
 include ($_SERVER['DOCUMENT_ROOT'] . '/functions/dbclose.php');
 
-header('Location: /index.php?page=members');
-die();
+//header('Location: /index.php?page=members');
+//die();
 
 ?>
