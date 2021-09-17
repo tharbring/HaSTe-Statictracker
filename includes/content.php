@@ -5,6 +5,7 @@ $members = "members";
 $addmember = "addmember";
 $times = "times";
 $gear = "gear";
+$lootpriority = "lootpriority";
 
 switch ($_GET['page']) {
     case $addmember:
@@ -18,6 +19,9 @@ switch ($_GET['page']) {
     break;
     case $gear:
         include ($_SERVER['DOCUMENT_ROOT'] . '/content/gear.php'); 
+    break;
+    case $lootpriority:
+        include ($_SERVER['DOCUMENT_ROOT'] . '/content/lootpriority.php'); 
     break;
     default:
         include ($_SERVER['DOCUMENT_ROOT'] . '/content/start.php');

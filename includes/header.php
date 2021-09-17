@@ -6,17 +6,24 @@
         <a class="nav-link navlink-padding" href="./index.php?page=members">Members</a>
       </li>
       <li class="nav-item dropdown">
-          <a class="nav-link navlink-padding dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Times</a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="nav-link navlink-padding dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-bs-toggle="dropdown" aria-expanded="false">Times</a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown1">
             <?php include ($_SERVER['DOCUMENT_ROOT'] . '/functions/headerfunctions/timeSelections.php'); ?>
           </ul>
       </li>
       <li class="nav-item dropdown">
-          <a class="nav-link navlink-padding dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Gear</a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="nav-link navlink-padding dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-bs-toggle="dropdown" aria-expanded="false">Gear</a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown2">
             <?php include ($_SERVER['DOCUMENT_ROOT'] . '/functions/headerfunctions/gearSelections.php'); ?>
           </ul>
       </li>
+      <li class="nav-item dropdown">
+          <a class="nav-link navlink-padding dropdown-toggle" href="#" id="navbarDropdown3" role="button" data-bs-toggle="dropdown" aria-expanded="false">Loot-Priority</a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown3">
+            <?php include ($_SERVER['DOCUMENT_ROOT'] . '/functions/headerfunctions/lootprioSelections.php'); ?>
+          </ul>
+      </li>
+
     </ul>
   </div>
 </nav>
