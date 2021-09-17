@@ -41,7 +41,7 @@ function bisMainSelector($res, $slot){
 function currentOffSelector($res, $slot){
     $counter = 0;
     $output = '';
-    $output = $output . '<option value="NULL">None</option>';
+    $output = $output . '<option value="0">None</option>';
     while($res[$counter]["ID"]){
         if($res[$counter]["ID"] == $slot){
             $output = $output . '<option value="' . $res[$counter]["ID"] . '" selected>' . $res[$counter]["name"] . ' (' . $res[$counter]["ilvl"] . ')' . '</option>';
@@ -55,7 +55,7 @@ function currentOffSelector($res, $slot){
 function bisOffSelector($res, $slot){
     $counter = 0;
     $output = '';
-    $output = $output . '<option value="NULL">None</option>';
+    $output = $output . '<option value="0">None</option>';
     while($res[$counter]["ID"]){
         if($res[$counter]["ID"] == $slot){
             $output = $output . '<option value="' . $res[$counter]["ID"] . '" selected>' . $res[$counter]["name"] . ' (' . $res[$counter]["ilvl"] . ')' . '</option>';

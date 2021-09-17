@@ -23,9 +23,42 @@ switch($job){
     case "WAR":
     case "DRK":
     case "GNB":
-        $armor = "fending_armor";
-        $accessories = "fending_accessories";
-        break;
+      $armor = "fending_armor";
+      $accessories = "fending_accessories";
+      break;
+    case "WHM":
+    case "SCH":
+    case "AST":
+    case "SGE":
+      $armor = "healing_armor";
+      $accessories = "healing_accessories";
+      break;
+    case "MNK":
+    case "SAM":
+      $armor = "striking_armor";
+      $accessories = "striking_accessories";
+      break;
+    case "DRG":
+    case "RPR":
+      $armor = "maiming_armor";
+      $accessories = "maiming_accessories";
+      break;
+    case "NIN":
+      $armor = "scouting_armor";
+      $accessories = "scouting_accessories";
+      break;
+    case "BRD":
+    case "MCH":
+    case "DNC":
+      $armor = "aiming_armor";
+      $accessories = "aiming_accessories";
+      break;
+    case "BLM":
+    case "SMN":
+    case "RDM":
+      $armor = "casting_armor";
+      $accessories = "casting_accessories";
+      break;
 }
 
 // Fetch Mainhands
