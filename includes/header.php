@@ -18,10 +18,7 @@
           </ul>
       </li>
       <li class="nav-item dropdown">
-          <a class="nav-link navlink-padding dropdown-toggle" href="#" id="navbarDropdown3" role="button" data-bs-toggle="dropdown" aria-expanded="false">Loot-Priority</a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdown3">
-            <?php include ($_SERVER['DOCUMENT_ROOT'] . '/functions/headerfunctions/lootprioSelections.php'); ?>
-          </ul>
+          <a class="nav-link navlink-padding" href="./index.php?page=lootpriority">Loot-Priority</a>
       </li>
 
     </ul>

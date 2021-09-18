@@ -1,165 +1,28 @@
-<?php
-
-$id = $_GET["id"];
-
-$slots = array("Mainweapon", "Offhand", "Head", "Body", "Hands", "Legs", "Feet", "Earrings", "Necklace", "Bracelet", "Ring 1", "Ring 2");
-$slot = $slots[$id];
-
-?>
-
 <div class="row">
-    <h1 class="font-header"><?php echo $slot; ?></h1>
+    <h1 class="font-header">Loot-Priority</h1>
 </div>
 <form action="/functions/updateLootpriority.php" method="post">
-    <div class="row overview-table">
+    <div class="row priority-table">
         <table class="table table-hover table-dark table-striped">
             <thead>
                 <tr>
-                    <th scope="col">Slot</th>
-                    <th scope="col">First</th>
-                    <th scope="col">Second</th>
-                    <th scope="col">Third</th>
-                    <th scope="col">Four</th>
-                    <th scope="col">Fifth</th>
-                    <th scope="col">Sixth</th>
-                    <th scope="col">Seventh</th>
-                    <th scope="col">Eigth</th>
+                    <th scope="col">Player</th>
+                    <th scope="col">Mainhand</th>
+                    <th scope="col">Offhand</th>
+                    <th scope="col">Head</th>
+                    <th scope="col">Body</th>
+                    <th scope="col">Hands</th>
+                    <th scope="col">Legs</th>
+                    <th scope="col">Feet</th>
+                    <th scope="col">Earrings</th>
+                    <th scope="col">Necklace</th>
+                    <th scope="col">Bracelet</th>
+                    <th scope="col">Ring 1</th>
+                    <th scope="col">Ring 2</th>
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <th scope="row">Mainhand</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                </tr>
-                <tr>
-                    <th scope="row">Offhand</th>
-                    <td>Jacob</td>
-                    <td>Thornton</td>
-                    <td>@fat</td>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                </tr>
-                <tr>
-                    <th scope="row">Head</th>
-                    <td>Larry the Bird</td>
-                    <td>Larry the Bird</td>
-                    <td>@twitter</td>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                </tr>
-                <tr>
-                    <th scope="row">Body</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                </tr>
-                <tr>
-                    <th scope="row">Hands</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                </tr>
-                <tr>
-                    <th scope="row">Legs</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                </tr>
-                <tr>
-                    <th scope="row">Feet</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                </tr>
-                <tr>
-                    <th scope="row">Earrings</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                </tr>
-                <tr>
-                    <th scope="row">Necklace</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                </tr>
-                <tr>
-                    <th scope="row">Bracelet</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                </tr>
-                <tr>
-                    <th scope="row">Ring 1</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                </tr>
-                <tr>
-                    <th scope="row">Ring 2</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                </tr>
-
+                <?php include ($_SERVER['DOCUMENT_ROOT'] . '/functions/createPrioritytable.php'); ?>
             </tbody>
         </table>
     </div>
