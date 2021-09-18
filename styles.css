@@ -22,6 +22,9 @@ main{
 .font-subheader{
   color: rgb(255, 255, 255);
 }
+.table-caption{
+  color: aliceblue;
+}
 
 /*** Header CSS ***/
 
@@ -29,14 +32,24 @@ main{
   padding-top: 6px;
   padding-bottom: 0px;
 }
+.header-padding {
+  padding-left: 10%;
+  padding-right: 10%;
+}
 
 /*** Overview-CSS ***/
 
 .overview-table{
   text-align: center;
   padding-top: 1%;
-  padding-left: 20%;
-  padding-right: 20%;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+.overview-lootorder{
+  text-align: center;
+  padding-top: 1%;
+  padding-left: 5%;
+  padding-right: 5%;
 }
 
 /*** Member-CSS ***/

@@ -31,9 +31,6 @@ function prioritySelector($player, $slot,  $priority){
     echo $output;
 }
 
-echo $result[1][3];
-echo "<br>";
-
 ?>
 
 <tr>

@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-  <div class="container-fluid">
+  <div class="container-fluid header-padding">
     <a class="navbar-brand" href="./index.php">Overview</a>
     <ul class="navbar-nav me-auto mb-2 mb-md-0">
       <li class="nav-item">

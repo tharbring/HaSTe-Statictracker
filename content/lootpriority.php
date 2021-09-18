@@ -4,6 +4,7 @@
 <form action="/functions/updateLootpriority.php" method="post">
     <div class="row priority-table">
         <table class="table table-hover table-dark table-striped">
+            <caption class="table-caption">Set the priority for each player from 1 to 8 (1 being the highest, 8 the lowest, 0 meaning no need)</caption>
             <thead>
                 <tr>
                     <th scope="col">Player</th>
