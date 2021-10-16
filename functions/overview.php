@@ -14,19 +14,19 @@ include ($_SERVER['DOCUMENT_ROOT'] . '/functions/dbclose.php');
 
 
 for($i = 0; $i < $row; $i++){
-    if (0 <= $res[$i]["ID"] && $res[$i]["ID"] < 7){
+    if (0 <= $res[$i]["ID"] && $res[$i]["ID"] < 13){
         $dayout = '<th>Monday</th>';
-    } else if (7 <= $res[$i]["ID"] && $res[$i]["ID"] < 13){
+    } else if (13 <= $res[$i]["ID"] && $res[$i]["ID"] < 25){
         $dayout = '<th>Tuesday</th>';
-    } else if (13 <= $res[$i]["ID"] && $res[$i]["ID"] < 19){
+    } else if (25 <= $res[$i]["ID"] && $res[$i]["ID"] < 37){
         $dayout = '<th>Wednesday</th>';
-    } else if (19 <= $res[$i]["ID"] && $res[$i]["ID"] < 25){
+    } else if (37 <= $res[$i]["ID"] && $res[$i]["ID"] < 49){
         $dayout = '<th>Thursday</th>';
-    } else if (25 <= $res[$i]["ID"] && $res[$i]["ID"] < 31){
+    } else if (49 <= $res[$i]["ID"] && $res[$i]["ID"] < 61){
         $dayout = '<th>Friday</th>';
-    } else if (31 <= $res[$i]["ID"] && $res[$i]["ID"] < 37){
+    } else if (61 <= $res[$i]["ID"] && $res[$i]["ID"] < 73){
         $dayout = '<th>Saturday</th>';
-    } else if (37 <= $res[$i]["ID"] && $res[$i]["ID"] < 42){
+    } else if (73 <= $res[$i]["ID"] && $res[$i]["ID"] < 84){
         $dayout = '<th>Sunday</th>';
     }
     $slotout = '<td>' . $res[$i]["slot"] . '</td>';
