@@ -59,23 +59,25 @@ $prio12 = $sql->fetchAll();
 include ($_SERVER['DOCUMENT_ROOT'] . '/functions/dbclose.php');
 
 function createTable($res, $player, $slot){
-    $smallest = $res[0][$slot];
-    $id = $res[0]["ID"];
-    $pid = $id - 1;
-    //echo "Smallest Value: " . $smallest . "<br> ID: " . $id . "<br> PlayerID: " . $player[$pid]["ID"] . "<br> PlayerName: " . $player[$pid]["name"] . "<br><br>";
-    for($i = 0; $i < 8;$i++){
-        if($smallest > $res[$i][$slot] && $res[$i][$slot] > 0){
-            $smallest = $res[$i][$slot];
-            $id = $res[$i]["ID"];
-            $pid = $id - 1;
-            //echo "Smallest Value: " . $smallest . "<br> ID: " . $id . "<br> PlayerID: " . $player[$pid]["ID"] . "<br> PlayerName: " . $player[$pid]["name"] . "<br><br>";
+    $smallest = 8;
+    $id = 0;
+
+    for($i = 0; $i <= 7;$i++){
+        if($res[$i][$slot] > 0){
+            if($res[$i][$slot] < $smallest){
+                $smallest = $res[$i][$slot];
+                $id = $res[$i]["ID"];
+                $pid = $id - 1;
+            }
         }
     }
 
+    //echo $smallest . "<br>";
+    //echo $id . "<br>";
 
     $output = "";
     if($smallest != 0){
-        $output = $output . '<form action="/functions/itemLooted.php" method="post">';
+        $output = $output . '<form action="/functions/itemLooted.php?slot='.$slot.'&pid='.$id.'" method="post">';
         $output = $output . '<table class="table table-sm table-hover table-dark table-striped align-middle">';
         $output = $output . '<thead>';
         $output = $output . '<tr>';

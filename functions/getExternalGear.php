@@ -62,11 +62,11 @@ switch($job){
 }
 
 // Fetch Mainhands
-$sql = $cn->prepare("SELECT * FROM weaponry WHERE job = 'PLD' AND slot = '1' ORDER BY ilvl DESC");
+$sql = $cn->prepare("SELECT * FROM weaponry WHERE job = '$job' AND slot = '1' ORDER BY ilvl DESC");
 $sql -> execute();
 $main = $sql->fetchAll();
 //Fetch Offhands
-$sql = $cn->prepare("SELECT * FROM weaponry WHERE job = 'PLD' AND slot = '2' ORDER BY ilvl DESC");
+$sql = $cn->prepare("SELECT * FROM weaponry WHERE job = '$job' AND slot = '2' ORDER BY ilvl DESC");
 $sql -> execute();
 $offhand = $sql->fetchAll();
 
