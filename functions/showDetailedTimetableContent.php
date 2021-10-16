@@ -19,56 +19,56 @@ function showTimes($data, $offset, $day){
     for($i = 0; $i < 12; $i++){
         $j = $i + $offset;    
         $output = $output . '<th scope="col">' . $data[$j]["slot"] . '</th>';
-        if($data[$j]["p1"] == $j){
+        if($data[$j]["p1"] == 0){
             $output = $output . '<td class="detail-unavailable"><span></span></td>';
         } else if($data[$j]["p1"] == 1){
             $output = $output . '<td class="detail-maybe"><span></span></td>';
         } else {
             $output = $output . '<td class="detail-available"><span></span></td>';
         }
-        if($data[$j]["p2"] == $j){
+        if($data[$j]["p2"] == 0){
             $output = $output . '<td class="detail-unavailable"><span></span></td>';
         } else if($data[$j]["p2"] == 1){
             $output = $output . '<td class="detail-maybe"><span></span></td>';
         } else {
             $output = $output . '<td class="detail-available"><span></span></td>';
         }
-        if($data[$j]["p3"] == $j){
+        if($data[$j]["p3"] == 0){
             $output = $output . '<td class="detail-unavailable"><span></span></td>';
         } else if($data[$j]["p3"] == 1){
             $output = $output . '<td class="detail-maybe"><span></span></td>';
         } else {
             $output = $output . '<td class="detail-available"><span></span></td>';
         }
-        if($data[$j]["p4"] == $j){
+        if($data[$j]["p4"] == 0){
             $output = $output . '<td class="detail-unavailable"><span></span></td>';
         } else if($data[$j]["p4"] == 1){
             $output = $output . '<td class="detail-maybe"><span></span></td>';
         } else {
             $output = $output . '<td class="detail-available"><span></span></td>';
         }
-        if($data[$j]["p5"] == $j){
+        if($data[$j]["p5"] == 0){
             $output = $output . '<td class="detail-unavailable"><span></span></td>';
         } else if($data[$j]["p5"] == 1){
             $output = $output . '<td class="detail-maybe"><span></span></td>';
         } else {
             $output = $output . '<td class="detail-available"><span></span></td>';
         }
-        if($data[$j]["p6"] == $j){
+        if($data[$j]["p6"] == 0){
             $output = $output . '<td class="detail-unavailable"><span></span></td>';
         } else if($data[$j]["p6"] == 1){
             $output = $output . '<td class="detail-maybe"><span></span></td>';
         } else {
             $output = $output . '<td class="detail-available"><span></span></td>';
         }
-        if($data[$j]["p7"] == $j){
+        if($data[$j]["p7"] == 0){
             $output = $output . '<td class="detail-unavailable"><span></span></td>';
         } else if($data[$j]["p7"] == 1){
             $output = $output . '<td class="detail-maybe"><span></span></td>';
         } else {
             $output = $output . '<td class="detail-available"><span></span></td>';
         }
-        if($data[$j]["p8"] == $j){
+        if($data[$j]["p8"] == 0){
             $output = $output . '<td class="detail-unavailable"><span></span></td>';
         } else if($data[$j]["p8"] == 1){
             $output = $output . '<td class="detail-maybe"><span></span></td>';
