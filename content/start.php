@@ -7,6 +7,7 @@
     <div class="col-8 overview-table">
         <div class="row text-center">
             <h1 class="font-subheader">Available Times</h1>
+            <a class="font-link" href="./index.php?page=timesdetail">To Detailed View</a>
         </div>
         <br>
         <div class="row">

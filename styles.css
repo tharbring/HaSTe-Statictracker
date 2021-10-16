@@ -22,6 +22,18 @@ main{
 .font-subheader{
   color: rgb(255, 255, 255);
 }
+.font-link:link{
+  color: rgb(255, 255, 255);
+}
+.font-link:visited{
+  color: rgb(255, 255, 255);
+}
+.font-link:hover{
+  color: rgb(155, 154, 154);
+}
+.font-link:active{
+  color: rgb(155, 154, 154);
+}
 .table-caption{
   color: aliceblue;
 }
@@ -66,6 +78,30 @@ main{
   padding-top: 0%;
   padding-left: 10%;
   padding-right: 10%;
+}
+
+/*** Detailed Times-CSS ***/
+
+.timesdetail-table{
+  text-align: center;
+  padding-top: 0%;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+td.detail-available{
+  background-color: green;
+}
+td.detail-maybe{
+  background-color: orange;
+}
+td.detail-unavailable{
+  background-color: red;
+}
+th.detail-divider{
+  background-color: #394046;
+}
+td.detail-divider{
+  background-color: #394046;
 }
 
 /*** Gear-CSS ***/
