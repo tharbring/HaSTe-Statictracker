@@ -1,5 +1,5 @@
 <div class="row">
-    <h1 class="font-header">Detailed Timing-Overview</h1>
+    <h1 class="font-header">Detailed Timetable</h1>
 </div>
 <br>
 <div class="row timesdetail-table">
