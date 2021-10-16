@@ -26,7 +26,7 @@ for($i = 0; $i < $row; $i++){
         $dayout = '<th>Friday</th>';
     } else if (61 <= $res[$i]["ID"] && $res[$i]["ID"] < 73){
         $dayout = '<th>Saturday</th>';
-    } else if (73 <= $res[$i]["ID"] && $res[$i]["ID"] < 84){
+    } else if (73 <= $res[$i]["ID"] && $res[$i]["ID"] < 85){
         $dayout = '<th>Sunday</th>';
     }
     $slotout = '<td>' . $res[$i]["slot"] . '</td>';
