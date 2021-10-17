@@ -1,12 +1,57 @@
 <?php
 
-function functionTest($res){
-    echo $res[0]["name"];
-    echo "Functiontest";
-}
+function calculateilvl($data, $main, $off, $armor, $accessory){
+  
+    $rows = count($data);
+    echo $rows . "<br>";
+    
+    //Switch to assign Item-IDs: $data[Index][Current]
 
-function echoFunction(){
-    echo "Echo-Test";
+    for($i = 0; $i < 12; $i++){
+        switch($data[$i]["slot"]){
+            case "1";
+                echo "Case 1";
+                break;
+            case "2":
+                if($data[$i]["current"] == NULL){
+                    echo "Case NULL";
+                } else {
+                    echo "Case 2";
+                }
+                break;
+            case "3":
+                echo "Case 3";
+                break;
+            case "4":
+                echo "Case 4";
+                break;
+            case "5":
+                echo "Case 5";
+                break;
+            case "6";
+                echo "Case 6";
+                break;
+            case "7":
+                echo "Case 7";
+                break;
+            case "8":
+                echo "Case 8";
+                break;
+            case "9":
+                echo "Case 9";
+                break;
+            case "10":
+                echo "Case 10";
+                break;
+            case "11":
+                echo "Case 11";
+                break;
+            case "12":
+                echo "Case 12";
+                break;
+        }
+    }
+
 }
 
 //Mainhand-Selectors
@@ -321,3 +366,4 @@ function bisRingSelector($res, $slot){
     }
     echo $output;
 }
+
