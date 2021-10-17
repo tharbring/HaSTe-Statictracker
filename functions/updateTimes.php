@@ -5,13 +5,13 @@ $pid = "p" . $id;
 
 $values = array();
 
-for($i = 1; $i <= 42; $i++){
+for($i = 1; $i <= 84; $i++){
     $values[] = $_POST[$i];
 }
 
 include ($_SERVER['DOCUMENT_ROOT'] . '/functions/dbaccess.php');
 
-for($i = 0; $i < 42; $i++){
+for($i = 0; $i < 84; $i++){
     $j = $i + 1;
     try{
         $sql = $conn->prepare("UPDATE schedule SET $pid = '$values[$i]' WHERE ID = '$j'");

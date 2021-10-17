@@ -8,7 +8,7 @@ $sql -> execute();
 $players = $sql->fetchAll();
 
 //Fetch Priority - Slot 1
-$sql = $conn->prepare("SELECT ID, `1` FROM lootpriority ORDER BY ID ASC");
+$sql = $conn->prepare("SELECT ID, `1` FROM lootpriority");
 $sql -> execute();
 $prio1 = $sql->fetchAll();
 //Fetch Priority - Slot 2
@@ -59,24 +59,26 @@ $prio12 = $sql->fetchAll();
 include ($_SERVER['DOCUMENT_ROOT'] . '/functions/dbclose.php');
 
 function createTable($res, $player, $slot){
-    $smallest = 8;
     $id = 0;
 
-    for($i = 0; $i <= 7;$i++){
-        if($res[$i][$slot] > 0){
-            if($res[$i][$slot] < $smallest){
-                $smallest = $res[$i][$slot];
-                $id = $res[$i]["ID"];
-                $pid = $id - 1;
-            }
-        }
+    $ids = array();
+    $values = array();
+
+    for($j = 0; $j <= 7; $j++){
+        $ids[$j] = $res[$j]["ID"];
+        $values[$j] = $res[$j][$slot];
     }
 
-    //echo $smallest . "<br>";
-    //echo $id . "<br>";
+    $min = min(array_diff($values, array(0)));
+
+    if($min){
+        $key = array_search($min, $values);
+    }
 
     $output = "";
-    if($smallest != 0){
+    if($min){
+        $key = array_search($min, $values);
+        $id = $ids[$key];
         $output = $output . '<form action="/functions/itemLooted.php?slot='.$slot.'&pid='.$id.'" method="post">';
         $output = $output . '<table class="table table-sm table-hover table-dark table-striped align-middle">';
         $output = $output . '<thead>';
@@ -109,7 +111,7 @@ function createTable($res, $player, $slot){
             $output = $output . '</tr>';
         $output = $output . '</thead>';
         $output = $output . '<tbody>';
-        $output = $output . '<th scope="row">' . $player[$pid]["name"] . '</th>';
+        $output = $output . '<th scope="row">' . $player[$key]["name"] . '</th>';
         $output = $output . '<td>';
         $output = $output . '<button type="submit" class="btn-sm btn-light"><img src="/storage/img/check.svg" alt="Looted" width="20" height="20"></button>';
         $output = $output . '</td>';

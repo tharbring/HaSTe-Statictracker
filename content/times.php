@@ -26,7 +26,7 @@ $updateURL = "/functions/updateTimes.php?id=" . $id;
                     <th scope="col">Timeslot</th>
                     <th scope="col">Available</th>
                     <th scope="col">Maybe</th>
-                    <th scope="col">Unavialable</th>
+                    <th scope="col">Unavailable</th>
                 </tr>
             </thead>
             <tbody>
