@@ -69,7 +69,9 @@ function createTable($res, $player, $slot){
         $values[$j] = $res[$j][$slot];
     }
 
-    $min = min(array_diff($values, array(0)));
+    if(min(array_diff($values, array(0)))){
+        $min = min(array_diff($values, array(0)));
+    }
 
     if($min){
         $key = array_search($min, $values);
@@ -122,37 +124,17 @@ function createTable($res, $player, $slot){
     echo $output;
 }
 
-createTable($prio1, $players, 1);
-createTable($prio2, $players, 2);
-createTable($prio3, $players, 3);
-createTable($prio4, $players, 4);
-createTable($prio5, $players, 5);
-createTable($prio6, $players, 6);
-createTable($prio7, $players, 7);
-createTable($prio8, $players, 8);
-createTable($prio9, $players, 9);
-createTable($prio10, $players, 10);
-createTable($prio11, $players, 11);
-createTable($prio12, $players, 12);
+@createTable($prio1, $players, 1);
+@createTable($prio2, $players, 2);
+@createTable($prio3, $players, 3);
+@createTable($prio4, $players, 4);
+@createTable($prio5, $players, 5);
+@createTable($prio6, $players, 6);
+@createTable($prio7, $players, 7);
+@createTable($prio8, $players, 8);
+@createTable($prio9, $players, 9);
+@createTable($prio10, $players, 10);
+@createTable($prio11, $players, 11);
+@createTable($prio12, $players, 12);
 
 ?>
-
-<!--
-Table-Template
-
-<form action="/functions/itemLooted.php" method="post"> 
-    <table class="table table-sm table-hover table-dark table-striped align-middle">
-        <thead>
-            <tr>
-                <th scope="col">Mainhand</th>
-            </tr>
-        </thead>
-        <tbody>
-            <th scope="row">Playername</th>
-            <td>
-                <button type="submit" class="btn-sm btn-light"><img src="/storage/img/check.svg" alt="Looted" width="20" height="20"></button>
-            </td>
-        </tbody>
-    </table>
-</form>
--->
