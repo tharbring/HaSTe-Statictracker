@@ -1,17 +1,17 @@
 <?php
 
-/** DATENBANK-LOGIN Entwicklerseite */
+/** DATENBANK-LOGIN Entwicklerseite 
 $servername = "mysql4717.kunden.kontent.com";
 $dbname = "db70827";
 $username = "db70827";
 $password = 'yt4MeAsfL4Zncr4pHjX9bfnMf';
-
-/** DATENBANK-LOGINDATEN LOKAL
+*/
+/** DATENBANK-LOGINDATEN LOKAL */
 $servername = "localhost";
 $dbname = "ffxiv-gear";
 $username = "admin";
 $password = "root";
-*/
+
 
 try {
   $cn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
