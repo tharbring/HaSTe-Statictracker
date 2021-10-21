@@ -1,57 +1,161 @@
 <?php
 
-function calculateilvl($data, $main, $off, $armor, $accessory){
+function calculateilvl($data, $main, $off, $head, $body, $hands, $legs, $feet, $earrings, $necklace, $bracelet, $rings){
   
-    $rows = count($data);
-    echo $rows . "<br>";
-    
     //Switch to assign Item-IDs: $data[Index][Current]
 
     for($i = 0; $i < 12; $i++){
+        $counter = 0;
         switch($data[$i]["slot"]){
+            // Main
             case "1";
-                echo "Case 1";
-                break;
-            case "2":
-                if($data[$i]["current"] == NULL){
-                    echo "Case NULL";
-                } else {
-                    echo "Case 2";
+                $mainID = $data[$i]["current"];
+                while($main[$counter]){
+                    if($mainID == $main[$counter]["ID"]){
+                        $mainilvl = $main[$counter]["ilvl"];
+                        //echo $mainilvl . "<br>";
+                    }
+                    $counter++;
                 }
                 break;
+            // Off-Hand
+            case "2":
+                if($data[$i]["current"] == NULL){
+                    $offilvl = NULL;
+                } else {
+                    $offID = $data[$i]["current"];
+                    while($off[$counter]){
+                        if($offID == $off[$counter]["ID"]){
+                            $offilvl = $off[$counter]["ilvl"];
+                            //echo $offilvl . "<br>";
+                        }
+                    $counter++;
+                    }
+                }
+                break;
+            // Head
             case "3":
-                echo "Case 3";
+                $headID = $data[$i]["current"];
+                while($head[$counter]){
+                    if($headID == $head[$counter]["ID"]){
+                        $headilvl = $head[$counter]["ilvl"];
+                        //echo $headilvl . "<br>";
+                    }
+                    $counter++;
+                }
                 break;
+            // Body
             case "4":
-                echo "Case 4";
+                $bodyID = $data[$i]["current"];
+                while($body[$counter]){
+                    if($bodyID == $body[$counter]["ID"]){
+                        $bodyilvl = $body[$counter]["ilvl"];
+                        //echo $bodyilvl . "<br>";
+                    }
+                    $counter++;
+                }
                 break;
+            // Hands
             case "5":
-                echo "Case 5";
+                $handsID = $data[$i]["current"];
+                while($hands[$counter]){
+                    if($handsID == $hands[$counter]["ID"]){
+                        $handsilvl = $hands[$counter]["ilvl"];
+                        //echo $handsilvl . "<br>";
+                    }
+                    $counter++;
+                }
                 break;
+            // Legs
             case "6";
-                echo "Case 6";
+            $legsID = $data[$i]["current"];
+                while($legs[$counter]){
+                    if($legsID == $legs[$counter]["ID"]){
+                        $legsilvl = $legs[$counter]["ilvl"];
+                        //echo $legsilvl . "<br>";
+                    }
+                    $counter++;
+                }
                 break;
+            // Feet
             case "7":
-                echo "Case 7";
+                $feetID = $data[$i]["current"];
+                while($feet[$counter]){
+                    if($feetID == $feet[$counter]["ID"]){
+                        $feetilvl = $feet[$counter]["ilvl"];
+                        //echo $feetilvl . "<br>";
+                    }
+                    $counter++;
+                }
                 break;
+            // Earrings
             case "8":
-                echo "Case 8";
+                $earringsID = $data[$i]["current"];
+                while($earrings[$counter]){
+                    if($earringsID == $earrings[$counter]["ID"]){
+                        $earringsilvl = $earrings[$counter]["ilvl"];
+                        //echo $earringsilvl . "<br>";
+                    }
+                    $counter++;
+                }
                 break;
+            // Necklace
             case "9":
-                echo "Case 9";
+                $necklaceID = $data[$i]["current"];
+                while($necklace[$counter]){
+                    if($necklaceID == $necklace[$counter]["ID"]){
+                        $necklaceilvl = $necklace[$counter]["ilvl"];
+                        //echo $necklaceilvl . "<br>";
+                    }
+                    $counter++;
+                }
                 break;
+            // Bracelet
             case "10":
-                echo "Case 10";
+                $braceletID = $data[$i]["current"];
+                while($bracelet[$counter]){
+                    if($braceletID == $bracelet[$counter]["ID"]){
+                        $braceletilvl = $bracelet[$counter]["ilvl"];
+                        //echo $braceletilvl . "<br>";
+                    }
+                    $counter++;
+                }
                 break;
+            // Ring 1
             case "11":
-                echo "Case 11";
+                $ring1ID = $data[$i]["current"];
+                while($rings[$counter]){
+                    if($ring1ID == $rings[$counter]["ID"]){
+                        $ring1ilvl = $rings[$counter]["ilvl"];
+                        //echo $ring1ilvl . "<br>";
+                    }
+                    $counter++;
+                }
                 break;
+            // Ring 2
             case "12":
-                echo "Case 12";
+                $ring2ID = $data[$i]["current"];
+                while($rings[$counter]){
+                    if($ring2ID == $rings[$counter]["ID"]){
+                        $ring2ilvl = $rings[$counter]["ilvl"];
+                        //echo $ring2ilvl . "<br>";
+                    }
+                    $counter++;
+                }
                 break;
         }
     }
 
+    //Item-Level Calculation
+
+    if($offilvl == NULL ){
+        $sum = $mainilvl+$headilvl+$bodyilvl+$handsilvl+$legsilvl+$feetilvl+$earringsilvl+$necklaceilvl+$braceletilvl+$ring1ilvl+$ring2ilvl;
+        $ilvl = round($sum/11);
+    } else {
+        $sum = $mainilvl+$offilvl+$headilvl+$bodyilvl+$handsilvl+$legsilvl+$feetilvl+$earringsilvl+$necklaceilvl+$braceletilvl+$ring1ilvl+$ring2ilvl;
+        $ilvl = round($sum/12);
+    }
+    echo $ilvl;
 }
 
 //Mainhand-Selectors

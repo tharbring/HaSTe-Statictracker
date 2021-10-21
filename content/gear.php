@@ -29,8 +29,7 @@ $updateURL = "/functions/updateGear.php?id=" . $id;
     <h1 class="font-header"><?php echo $res["name"]; ?></h1>
 </div>
 <div class="row">
-    <h4 class="font-subheader">Average Item-Level</h4>
-    <?php calculateilvl($gear, $main, $offhand, $armor, $accessories); ?>
+    <h4 class="font-subheader">Average Item-Level: <?php calculateilvl($gear, $main, $offhand, $head, $body, $hands, $legs, $feet, $earrings, $necklace, $bracelet, $rings); ?></h4>
 </div>
 <form action="<?php echo $updateURL; ?>" method="post">
     <div class="row gear-row text-center">
