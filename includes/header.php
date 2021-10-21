@@ -22,5 +22,11 @@
       </li>
 
     </ul>
+    <ul class="navbar-nav mb-2 mb-md-0 justify-content-end">
+      <li class="nav-item dropdown">
+      <a class="nav-link navlink-padding justify-content-end" target="_blank" href="https://harbring.com/">About</a>
+      </li>
+    </ul>
+
   </div>
 </nav>

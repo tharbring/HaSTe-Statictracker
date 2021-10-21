@@ -48,6 +48,9 @@ main{
   padding-left: 10%;
   padding-right: 10%;
 }
+.nav-right{
+  text-align: right;
+}
 
 /*** Overview-CSS ***/
 

@@ -45,7 +45,7 @@ for($i = 0; $i<8; $i++){
                 </th>
                 <td>
                     <input type="hidden" id="dbid" value="'. $tanks[$i]['ID'] . '" name="dbid'.$counter.'">
-                    <input type="text" class="form-control" id="name" value="'. $tanks[$i]['name'] . '" name="name'.$counter.'">
+                    <input type="text" class="form-control" id="name" value="'. $tanks[$i]['name'] . '" name="name'.$counter.'" required>
                 </td>
                 <td>
                     <select class="form-select" id="primaryjob" name="primary'.$counter.'">'. showSelectors($tanks[$i]['job_primary']) .'</select>
