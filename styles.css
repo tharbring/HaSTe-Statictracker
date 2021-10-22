@@ -37,6 +37,15 @@ main{
 .table-caption{
   color: aliceblue;
 }
+.footer-link{
+  color: rgb(253, 253, 253);
+}
+.footer-link:link{
+  color: rgb(255, 255, 255);
+}
+.footer-link:hover{
+  color: rgb(141, 141, 141);
+}
 
 /*** Header CSS ***/
 
@@ -50,6 +59,13 @@ main{
 }
 .nav-right{
   text-align: right;
+}
+
+/*** Footer CSS ***/
+
+.footer-padding{
+  padding: 1%;
+  text-align: end;
 }
 
 /*** Overview-CSS ***/
