@@ -33,11 +33,6 @@ ini_set('display_startup_errors', 1);
   </main>
 
   <footer>
-    <div class="footer-padding">
-      <div class="col align-self-end">
-        <a class="footer-link" target="_blank" href="https://harbring.com/index.php?page=changelog_staticplanner">v1.0</a>
-      </div>
-    </div>
   </footer>
 
   <script src="/js/bootstrap.bundle.min.js"></script>

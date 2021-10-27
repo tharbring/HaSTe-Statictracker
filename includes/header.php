@@ -24,7 +24,10 @@
     </ul>
     <ul class="navbar-nav mb-2 mb-md-0 justify-content-end">
       <li class="nav-item dropdown">
-      <a class="nav-link navlink-padding justify-content-end" target="_blank" href="https://harbring.com/">About</a>
+        <a class="nav-link navlink-padding justify-content-end" target="_blank" href="https://harbring.com/">About</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link navlink-padding justify-content-end" target="_blank" href="https://harbring.com/index.php?page=changelog_staticplanner">v1.0</a>
       </li>
     </ul>
 
