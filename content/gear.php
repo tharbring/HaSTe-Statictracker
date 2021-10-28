@@ -27,6 +27,7 @@ $updateURL = "/functions/updateGear.php?id=" . $id;
 
 <div class="row">
     <h1 class="font-header"><?php echo $res["name"]; ?></h1>
+    <p>Note: This page is currently only for demonstration/testing purposes and intended to be used when FFXIV Endwalker releases. Thus only PLD gear is currently added.</p>
 </div>
 <div class="row">
     <h4 class="font-subheader">Average Item-Level: <?php calculateilvl($gear, $main, $offhand, $head, $body, $hands, $legs, $feet, $earrings, $necklace, $bracelet, $rings); ?></h4>
