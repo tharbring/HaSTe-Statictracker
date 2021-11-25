@@ -5,7 +5,7 @@
     <form action="/functions/addMember.php" method="post">
         <div class="row justify-content-center">
             <div class="form-floating floatlabel">
-                <input type="text" class="form-control" id="name" placeholder="Character Name" name="name">
+                <input type="text" class="form-control" id="name" placeholder="Character Name" name="name" required>
                 <label for="name">Character Name</label>
             </div>
         </div>
@@ -13,7 +13,7 @@
         <div class="row justify-content-evenly">
             <div class="col-6">
                 <div class="form-floating floatlabel">
-                    <select class="form-select" id="primaryjob" name="primary">
+                    <select class="form-select" id="primaryjob" name="primary" required>
                         <option value="PLD">PLD</option>
                         <option value="WAR">WAR</option>
                         <option value="DRK">DRK</option>
@@ -39,7 +39,7 @@
             </div>
             <div class="col-6">
                 <div class="form-floating floatlabel">
-                    <select class="form-select" id="secondaryjob" name="secondary">
+                    <select class="form-select" id="secondaryjob" name="secondary" required>
                         <option value="PLD">PLD</option>
                         <option value="WAR">WAR</option>
                         <option value="DRK">DRK</option>
