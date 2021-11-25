@@ -4,7 +4,8 @@
     <meta name="description" content="">
     <meta name="author" content="T. Harbring">
     <meta name="generator" content="N/A">
-    <title>Statictracker-Demo</title>
+    <!--<title>Alt Tab V2.0</title>-->
+    <title>Staticplanner-Demo</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/navbar-fixed/">
     <link href="/css/bootstrap.min.css" rel="stylesheet">
@@ -19,7 +20,8 @@
     <main>
         <form action="/authenticate.php" method="post">
             <div class="mb-3">
-                <label for="GroupPassword" class="form-label">Password: StatictrackerDemo2022</label>
+                <!--<label for="GroupPassword" class="form-label">Password:</label>-->
+                <label for="GroupPassword" class="form-label">Password: (StaticplannerDemo2022)</label>
                 <input type="password" class="form-control" id="GroupPassword" name="password">
             </div>
             <div class="mb-3 form-check">

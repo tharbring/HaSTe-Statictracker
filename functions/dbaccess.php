@@ -1,19 +1,19 @@
 <?php
 
-/** DATENBANK-LOGIN Entwicklerseite */
-
+/** DATENBANK-LOGIN LIVE
 $servername = "mysql4717.kunden.kontent.com";
-$dbname = "db70242";
-$username = "db70242";
-$password = 'azPJUAoihjNDQ654Ux3C6cieR';
+$dbname = "db71273";
+$username = "db71273";
+$password = 'VABwWAjURsjkn4x9hk9DxfinA';
+*/
 
 /** DATENBANK-LOGINDATEN LOKAL **/
-/*
+
 $servername = "localhost";
 $dbname = "statictracker";
 $username = "admin";
 $password = "root";
-*/
+
 
 try {
   $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
