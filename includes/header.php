@@ -27,7 +27,7 @@
         <a class="nav-link navlink-padding justify-content-end" target="_blank" href="https://harbring.com/">About</a>
       </li>
       <li class="nav-item dropdown">
-        <a class="nav-link navlink-padding justify-content-end" target="_blank" href="https://harbring.com/index.php?page=changelog_staticplanner">v1.0</a>
+        <a class="nav-link navlink-padding justify-content-end" target="_blank" href="https://harbring.com/index.php?page=changelog_staticplanner">v1.1</a>
       </li>
     </ul>
 
