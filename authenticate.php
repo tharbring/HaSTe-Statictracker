@@ -4,7 +4,7 @@ $pass = $_POST["password"];
 $setcookie = $_POST["setcookie"];
 
 if($pass == "StaticplannerDemo2022"){
-//if($pass == "TripleLegendsBTW"){
+//if($pass == "Scree"){
     if($setcookie == "on"){
         setcookie("login", "active", time() + (86400 * 90));
         header('Location: /index.php');

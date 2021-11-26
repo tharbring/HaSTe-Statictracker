@@ -21,7 +21,7 @@ if(!isset($_COOKIE["login"])){
     <meta name="description" content="">
     <meta name="author" content="T. Harbring">
     <meta name="generator" content="N/A">
-    <!--<title>Alt Tab V2.0</title>-->
+    <!--<title>Scree Family</title>-->
     <title>Staticplanner-Demo</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/navbar-fixed/">
