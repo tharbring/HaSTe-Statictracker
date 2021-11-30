@@ -3,9 +3,9 @@
 /** DATENBANK-LOGIN LIVE */
 /*
 $servername = "mysql4717.kunden.kontent.com";
-$dbname = "db71320";
-$username = "db71320";
-$password = 'qdEdr9Ee88qeZU9H8H3H5ih5Y';
+$dbname = "db-NAME";
+$username = "db-USER";
+$password = 'DBPASSWORD';
 */
 
 /** DATENBANK-LOGINDATEN LOKAL **/
