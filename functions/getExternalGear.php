@@ -42,16 +42,16 @@ switch($job){
     case "MNK":
     case "SAM":
       $armor = "striking_armor";
-      $accessories = "striking_accessories";
+      $accessories = "slaying_accessories";
       break;
     case "DRG":
     case "RPR":
       $armor = "maiming_armor";
-      $accessories = "maiming_accessories";
+      $accessories = "slaying_accessories";
       break;
     case "NIN":
       $armor = "scouting_armor";
-      $accessories = "scouting_accessories";
+      $accessories = "aiming_accessories";
       break;
     case "BRD":
     case "MCH":
