@@ -1,6 +1,6 @@
 <div class="row">
     <!--<h1 class="font-header">GROUPNAME</h1>-->
-    <h1 class="font-header">Statictracker-Demo</h1>
+    <!--<h1 class="font-header">Staticplanner-Demo</h1>-->
 </div>
 <br>
 <br>
