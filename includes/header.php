@@ -20,6 +20,9 @@
       <li class="nav-item dropdown">
           <a class="nav-link navlink-padding" href="./index.php?page=lootpriority">Loot-Priority</a>
       </li>
+      <li class="nav-item dropdown">
+          <a class="nav-link navlink-padding" href="./index.php?page=loot">Loot</a>
+      </li>
 
     </ul>
     <ul class="navbar-nav mb-2 mb-md-0 justify-content-end">
@@ -27,7 +30,7 @@
         <a class="nav-link navlink-padding justify-content-end" target="_blank" href="https://harbring.com/">About</a>
       </li>
       <li class="nav-item dropdown">
-        <a class="nav-link navlink-padding justify-content-end" target="_blank" href="https://harbring.com/index.php?page=changelog_staticplanner">v1.1</a>
+        <a class="nav-link navlink-padding justify-content-end" target="_blank" href="https://harbring.com/index.php?page=changelog_staticplanner" style="color:Crimson;">v1.2</a>
       </li>
       <li class="nav-item dropdown">
         <a class="nav-link navlink-padding justify-content-end" target="_blank" href="https://discord.gg/4qCmERpSUk">

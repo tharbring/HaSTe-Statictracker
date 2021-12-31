@@ -27,7 +27,7 @@ $updateURL = "/functions/updateGear.php?id=" . $id;
 
 <div class="row">
     <h1 class="font-header"><?php echo $res["name"]; ?></h1>
-    <p>Note: This page is currently only for demonstration/testing purposes and intended to be used when FFXIV Endwalker releases. Gear will be added shortly after Endwalker releases.</p>
+    <p>Gear will be added as it is being added to the game.</p>
 </div>
 <div class="row">
     <h4 class="font-subheader">Average Item-Level: <?php calculateilvl($gear, $main, $offhand, $head, $body, $hands, $legs, $feet, $earrings, $necklace, $bracelet, $rings); ?></h4>

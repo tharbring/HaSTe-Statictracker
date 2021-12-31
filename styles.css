@@ -193,3 +193,13 @@ td.detail-divider{
 .priority-selector{
   width: 100%;
 }
+
+/*** Loot CSS ***/
+
+.nav-link{
+  color: white;
+}
+.nav-link:hover{
+  color: rgb(139, 139, 139);
+  text-decoration: underline;
+}
