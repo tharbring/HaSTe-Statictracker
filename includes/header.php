@@ -30,7 +30,7 @@
         <a class="nav-link navlink-padding justify-content-end" target="_blank" href="https://harbring.com/">About</a>
       </li>
       <li class="nav-item dropdown">
-        <a class="nav-link navlink-padding justify-content-end" target="_blank" href="https://harbring.com/index.php?page=changelog_staticplanner" style="color:Crimson;">v1.2</a>
+        <a class="nav-link navlink-padding justify-content-end" target="_blank" href="https://harbring.com/index.php?page=changelog_staticplanner">v1.2.1</a>
       </li>
       <li class="nav-item dropdown">
         <a class="nav-link navlink-padding justify-content-end" target="_blank" href="https://discord.gg/4qCmERpSUk">
